@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WealthTest</string>
+    <string name="degree">\u00B0</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
+    <string name="real_feel">Real Feel</string>
+    <string name="chnagelanguage">Change Language</string>
+</resources>

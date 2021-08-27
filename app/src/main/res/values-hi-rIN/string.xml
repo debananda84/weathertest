@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="humidity">नमी</string>
+    <string name="wind">हवा</string>
+    <string name="real_feel">असली लग रहा है</string>
+    <string name="chnagelanguage">भाषा बदलें</string>
+</resources>

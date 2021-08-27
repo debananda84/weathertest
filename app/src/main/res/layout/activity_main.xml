@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weather2"
+    tools:context=".ui.MainActivity">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_100dp"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="@dimen/_28sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="@dimen/_24sp"
+        android:textStyle="normal"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/city" />
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="@dimen/_24sp"
+        android:textStyle="normal"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/country"/>
+
+    <ImageView
+        android:id="@+id/weathericon"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_100dp"
+        android:layout_marginTop="@dimen/_48dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="@dimen/_35sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weathericon" />
+
+    <TextView
+        android:id="@+id/cloud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="@dimen/_24sp"
+        android:textStyle="normal"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temp" />
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="@string/humidity"
+        android:gravity="center"
+        android:textColor="@color/quantum_grey600"
+        android:textSize="@dimen/_24sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/wind"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cloud" />
+
+    <TextView
+        android:id="@+id/wind"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:text="@string/wind"
+        android:textColor="@color/quantum_grey600"
+        android:textSize="@dimen/_24sp"
+        android:gravity="center"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/realfeel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/humidity"
+        app:layout_constraintTop_toTopOf="@+id/humidity" />
+
+    <TextView
+        android:id="@+id/realfeel"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:text="@string/real_feel"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/quantum_grey600"
+        android:textSize="@dimen/_24sp"
+        android:gravity="center"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/wind"
+        app:layout_constraintTop_toTopOf="@+id/wind" />
+
+    <TextView
+        android:id="@+id/humidy_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="@dimen/_24sp"
+        android:textStyle="normal"
+        android:textColor="@color/quantum_grey600"
+        app:layout_constraintEnd_toEndOf="@+id/humidity"
+        app:layout_constraintStart_toStartOf="@+id/humidity"
+        app:layout_constraintTop_toBottomOf="@+id/humidity" />
+
+    <TextView
+        android:id="@+id/wind_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="@dimen/_24sp"
+        android:textStyle="normal"
+        android:textColor="@color/quantum_grey600"
+        app:layout_constraintEnd_toEndOf="@+id/wind"
+        app:layout_constraintStart_toStartOf="@+id/wind"
+        app:layout_constraintTop_toTopOf="@+id/humidy_val" />
+
+    <TextView
+        android:id="@+id/feel_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="@dimen/_24sp"
+        android:textStyle="normal"
+        android:textColor="@color/quantum_grey600"
+        app:layout_constraintEnd_toEndOf="@+id/realfeel"
+        app:layout_constraintStart_toStartOf="@+id/realfeel"
+        app:layout_constraintTop_toTopOf="@+id/wind_val" />
+
+    <TextView
+        android:id="@+id/changelanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="@dimen/_17sp"
+        android:textStyle="normal"
+        android:textColor="@color/white"
+        android:text="@string/chnagelanguage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/english"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@color/teal_700"
+        android:paddingLeft="@dimen/_15dp"
+        android:paddingRight="@dimen/_15dp"
+        android:paddingTop="@dimen/_5dp"
+        android:paddingBottom="@dimen/_5dp"
+        android:text="Eng"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/changelanguage"
+        app:layout_constraintStart_toEndOf="@+id/changelanguage"
+        app:layout_constraintTop_toTopOf="@+id/changelanguage" />
+
+    <TextView
+        android:id="@+id/hindi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@color/teal_700"
+        android:paddingLeft="@dimen/_15dp"
+        android:paddingRight="@dimen/_15dp"
+        android:paddingTop="@dimen/_5dp"
+        android:paddingBottom="@dimen/_5dp"
+        android:text="Hindi"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/english"
+        app:layout_constraintStart_toEndOf="@+id/english"
+        app:layout_constraintTop_toTopOf="@+id/english" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
